@@ -1,0 +1,21 @@
+sectionPagesMenu = 'main'
+defaultContentLanguage = "sv"
+defaultContentLanguageInSubdir = true
+copyright = '&copy; 2023 IJH Apps AB. All Rights Reserved.'
+enableGitInfo = true
+
+[languages]
+  [languages.sv]
+    baseURL = 'https://www.dansstopp.se'
+    languageCode = 'sv-SE'
+    title = 'Dansstopp'
+    contentDir = "content/sv"
+    weight = 1
+  [languages.en]
+    baseURL = 'https://www.dansstopp.se'
+    languageCode = 'en-us'
+    title = 'Dance Stop'
+    contentDir = "content/en"
+    weight = 2
+    [languages.en.params]
+        color = 'blue'

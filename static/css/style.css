@@ -1,0 +1,206 @@
+/*
+  Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property
+  - The "symbol *" part is to solve Firefox SVG sprite bug
+*/
+*:where(:not(iframe, canvas, img, svg, video):not(svg *, symbol *)) {
+  all: unset;
+  display: revert;
+}
+/* Preferred box-sizing value */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/* Reapply the pointer cursor for anchor tags */
+a {
+  cursor: revert;
+}
+/* Remove list styles (bullets/numbers) */
+ol, ul, menu {
+  list-style: none;
+}
+/* For images to not be able to exceed their container */
+img {
+  max-width: 100%;
+}
+/* removes spacing between cells in tables */
+table {
+  border-collapse: collapse;
+}
+/* revert the 'white-space' property for textarea elements on Safari */
+textarea {
+  white-space: revert;
+}
+/* fix the feature of 'hidden' attribute.
+ display:revert; revert to element instead of attribute */
+:where([hidden]){
+  display:none;
+}
+/* revert for bug in Chromium browsers
+ - fix for the content editable attribute will work properly. */
+:where([contenteditable]){
+  -moz-user-modify: read-write;
+  -webkit-user-modify: read-write;
+  overflow-wrap: break-word;
+  -webkit-line-break: after-white-space;
+}
+/* apply back the draggable feature - exist only in Chromium and Safari */
+:where([draggable="true"]) {
+  -webkit-user-drag: element;
+}
+
+
+:root {
+    --color1B: #FF5E2C;
+    --color2B: #F9B739;
+    --color4A: #1A9292;
+    --colorWhite: #EBEBEB;
+    --colorWhite70: #EBEBEBB2;
+
+    --fontLarge: 700 32px 'Helvetica Neue', Arial, sans-serif;
+    --fontMedium: 24px 'Helvetica Neue', Arial, sans-serif;
+    --fontSmall: 20px 'Helvetica Neue', Arial, sans-serif;
+    --fontExtraSmall: 16px 'Helvetica Neue', Arial, sans-serif;
+    --fontFooter: 13px 'Helvetica Neue', Arial, sans-serif;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Helvetica Nueue', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--color4A);
+    color: var(--colorWhite);
+}
+
+h1,
+h2,
+h3 {
+    color: var(--colorWhite);
+    margin: 0;
+    font: var(--fontLarge);
+}
+
+p {
+    color: var(--colorWhite70);
+    font: var(--fontSmall);
+}
+
+#content {
+    --containerWidth: 1140px;
+}
+
+#content main {
+    max-width: var(--containerWidth);
+    margin: 0 auto;
+}
+
+
+.index-section {
+    display: flex;
+    padding: 10%;
+    padding-top: 200px;
+    column-gap: 20%;
+}
+
+.index-section .left-side {
+    text-align: center;
+}
+
+.index-section .left-side .logo {
+    width: 515px;
+    margin-bottom: 24px;
+}
+
+.index-section .left-side h2 {
+    margin-bottom: 24px;
+    letter-spacing: 0.64px;
+    padding: 0 10%;
+}
+
+.index-section .left-side p {
+    margin-bottom: 56px;
+    padding: 0 2%;
+}
+
+.index-section .right-side {
+    min-width: 300px;
+}
+
+.index-section .hero {
+    height: 100%;
+    object-fit: cover;
+}
+
+.index-section .app-list .app-icon {
+    width: 153px;
+}
+
+.index-section .app-list .free-download {
+    position: absolute;
+    width: 116px;
+    margin-left: 16px;
+    margin-top: -6px;
+}
+
+.single-section {
+    padding: 10%;
+    padding-top: 60px;
+    text-align: center;
+}
+
+.single-section .single-content {
+    padding-top: 120px;
+    text-align: left;
+}
+
+.single-section h2 {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.single-section p {
+    font: var(--fontSmall);
+    margin-bottom: 24px;
+}
+
+.single-section ul {
+    list-style: initial;
+    margin-bottom: 40px;
+}
+
+.single-section li {
+    margin-left: 20px;
+    padding-left: 20px;
+}
+
+footer {
+    font: var(--fontFooter);
+    color: var(--colorWhite70);
+    display: flex;
+    justify-content: space-between;
+    max-width: var(--containerWidth);
+    margin: 0 auto;
+    padding: 0 20px 30px 20px;
+}
+
+footer .link-list {
+    display: flex;
+    text-transform: uppercase;
+}
+
+footer .link-list li {
+    margin-left: 32px;
+}
+
+footer .link-list a:hover {
+    text-decoration: underline;
+    color: var(--colorWhite);
+}
+

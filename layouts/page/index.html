@@ -1,0 +1,18 @@
+{{ define "main" }}
+    <section class="index-section">
+        <div class="left-side">
+            <img src="logo.svg" alt="{{.Site.Title}}" class="logo">
+            {{ .Content }}
+            <ul class="app-list">
+                <li>
+                    <a href="{{.Site.Params.iosBadgeHref}}">
+                        <img src="download-ios-badge.svg" alt="{{.Site.Params.iosBadgeAlt}}" class="app-icon">
+                    </a>
+                    <img class="free-download" src="free-download.svg" class="free-download">
+                </li>
+        </div>
+        <div class="right-side">
+            <img src="phone.png" alt="" class="hero">
+        </div>
+    </section>
+{{ end }}
