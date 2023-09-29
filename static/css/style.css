@@ -134,8 +134,6 @@ p {
 }
 
 .index-section .hero {
-    height: 100%;
-    object-fit: cover;
 }
 
 .index-section .app-list .app-icon {
