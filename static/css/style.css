@@ -162,6 +162,7 @@ p {
         position: relative;
         margin-top: -100px;
         margin-bottom: 24px;
+        min-width: initial;
     }
 
     .index-section .app-list {
