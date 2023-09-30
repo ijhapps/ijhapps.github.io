@@ -147,6 +147,32 @@ p {
     margin-top: -6px;
 }
 
+
+@media screen and (max-width: 875px) {
+    .index-section  {
+        padding: 0 15% 40px;
+        flex-direction: column-reverse;
+    }
+
+    .index-section .left-side p {
+        padding: 0;
+    }
+
+    .index-section .right-side {
+        position: relative;
+        margin-top: -100px;
+        margin-bottom: 24px;
+    }
+
+    .index-section .app-list {
+        margin-bottom: 24px;
+    }
+
+    .index-section .app-list .app-icon {
+        width: 120px;
+    }
+}
+
 .single-section {
     padding: 10%;
     padding-top: 60px;
@@ -202,3 +228,23 @@ footer .link-list a:hover {
     color: var(--colorWhite);
 }
 
+@media screen and (max-width: 875px) {
+    footer {
+        flex-direction: column-reverse;
+    }
+
+    footer .link-list {
+        column-gap: 20px;
+        justify-content: space-between;
+        margin-bottom: 24px;
+    }
+
+    footer .link-list li {
+        margin-left: 0;
+    }
+
+    footer .copyright {
+        text-align: center;
+    }
+
+}
