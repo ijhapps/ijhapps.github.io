@@ -55,6 +55,7 @@ textarea {
     --color1B: #FF5E2C;
     --color2B: #F9B739;
     --color4A: #1A9292;
+    --color4AA: #158080;
     --colorWhite: #EBEBEB;
     --colorWhite70: #EBEBEBB2;
 
@@ -107,6 +108,7 @@ p {
     padding: 10%;
     padding-top: 200px;
     column-gap: 20%;
+    align-items: center;
 }
 
 .index-section .left-side {
@@ -114,8 +116,8 @@ p {
 }
 
 .index-section .left-side .logo {
-    width: 515px;
-    margin-bottom: 24px;
+    width: 408px;
+    margin-bottom: 40px;
 }
 
 .index-section .left-side h2 {
@@ -206,13 +208,16 @@ p {
 }
 
 footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    right: 0;
     font: var(--fontFooter);
     color: var(--colorWhite70);
     display: flex;
     justify-content: space-between;
-    max-width: var(--containerWidth);
-    margin: 0 auto;
-    padding: 0 20px 30px 20px;
+    padding: 35px 48px;
+    background-color: var(--color4AA);
 }
 
 footer .link-list {
@@ -231,6 +236,7 @@ footer .link-list a:hover {
 
 @media screen and (max-width: 875px) {
     footer {
+        position: initial;
         flex-direction: column-reverse;
     }
 
