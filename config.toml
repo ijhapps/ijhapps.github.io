@@ -1,7 +1,7 @@
 sectionPagesMenu = 'main'
 defaultContentLanguage = "sv"
 defaultContentLanguageInSubdir = true
-copyright = '&copy; 2023 IJH Apps AB. All Rights Reserved.'
+copyright = '&copy; 2023 AppaPappa AB'
 enableGitInfo = true
 
 [languages]
