@@ -6,11 +6,11 @@
     {{ end }}
 </head>
 <body>
-    <div id="content"> <!-- real SITE starts here -->
+    <div id="content" {{ if .Params.contentClass }}class="{{.Params.contentClass}}"{{ end }}>
         {{ partial "site-header.html" . }}
         <main>
             {{ block "main" . }}
-                <!-- site content from index.html -->
+
             {{ end }}
         </main>
         {{ block "footer" . }}
