@@ -61,8 +61,10 @@ textarea {
 
     --fontLarge: 700 32px 'Helvetica Neue', Arial, sans-serif;
     --fontMedium: 24px 'Helvetica Neue', Arial, sans-serif;
-    --fontSmall: 20px 'Helvetica Neue', Arial, sans-serif;
-    --fontExtraSmall: 16px 'Helvetica Neue', Arial, sans-serif;
+    --fontMediumLight: 300 24px 'Helvetica Neue', Arial, sans-serif;
+    --fontSmall: 300 20px 'Helvetica Neue', Arial, sans-serif;
+    --fontSmall2: 400 20px 'Helvetica Neue', Arial, sans-serif;
+    --fontExtraSmall: 300 16px 'Helvetica Neue', Arial, sans-serif;
     --fontFooter: 13px 'Helvetica Neue', Arial, sans-serif;
 }
 
@@ -97,6 +99,10 @@ p {
     --containerWidth: 1140px;
 }
 
+#content.terms {
+    --containerWidth: 640px;
+}
+
 #content main {
     max-width: var(--containerWidth);
     margin: 0 auto;
@@ -109,6 +115,10 @@ p {
     padding-top: 200px;
     column-gap: 20%;
     align-items: center;
+}
+
+.index-section p {
+    font: var(--fontSmall2);
 }
 
 .index-section .left-side {
@@ -183,28 +193,41 @@ p {
 }
 
 .single-section .single-content {
-    padding-top: 120px;
+    padding-top: 20px;
     text-align: left;
 }
 
 .single-section h2 {
+    font: var(--fontMediumLight);
     text-align: center;
     margin-bottom: 60px;
 }
 
+.single-section h2 em {
+    display: block;
+    text-align: center;
+    font: var(--fontExtraSmall);
+    opacity: .6;
+    padding-top: 10px;
+}
+
 .single-section p {
-    font: var(--fontSmall);
+    font: var(--fontExtraSmall);
     margin-bottom: 24px;
 }
 
 .single-section ul {
-    list-style: initial;
     margin-bottom: 40px;
 }
 
 .single-section li {
-    margin-left: 20px;
-    padding-left: 20px;
+}
+
+.single-section li strong {
+    display: block;
+    margin-bottom: 8px;
+    font: var(--fontSmall);
+    color: var(--colorWhite);
 }
 
 footer {
@@ -216,13 +239,12 @@ footer {
     color: var(--colorWhite70);
     display: flex;
     justify-content: space-between;
-    padding: 35px 48px;
+    padding: 24px 48px;
     background-color: var(--color4AA);
 }
 
 footer .link-list {
     display: flex;
-    text-transform: uppercase;
 }
 
 footer .link-list li {
@@ -237,13 +259,12 @@ footer .link-list a:hover {
 @media screen and (max-width: 875px) {
     footer {
         position: initial;
-        flex-direction: column-reverse;
+        padding: 24px;
     }
 
     footer .link-list {
         column-gap: 20px;
         justify-content: space-between;
-        margin-bottom: 24px;
     }
 
     footer .link-list li {
