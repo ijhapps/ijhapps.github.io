@@ -1,6 +1,5 @@
 ---
 menu: footer
-title: "Kontakt"
 Description: "Were the music party starts!"
 layout: "single"
 weight: 3
